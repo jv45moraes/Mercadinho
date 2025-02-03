@@ -21,6 +21,7 @@ public class Produto {
 	public Produto(String idProduto, String idfrnecedor, String nome, String codBarra, String lote, String dataFab,
 			String dataVal, String marca, String categoria, String unidadeMedida, String precoUn, String estoque) {
 		super();
+		
 		this.idProduto = idProduto;
 		this.idfornecedor = idfrnecedor;
 		this.nome = nome;
