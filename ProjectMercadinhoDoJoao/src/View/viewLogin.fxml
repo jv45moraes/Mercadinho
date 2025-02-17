@@ -1,8 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="720.0" prefWidth="1080.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22">
-	<!-- TODO Add Nodes -->
+<AnchorPane prefHeight="680.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.controllerLogin">
+   <children>
+      <ImageView fitHeight="680.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/LoginBackgroundImage.png" />
+         </image>
+         <viewport>
+            <Rectangle2D height="680.0" width="720.0" />
+         </viewport>
+      </ImageView>
+      <Pane layoutX="111.0" layoutY="58.0" prefHeight="541.0" prefWidth="486.0" style="-fx-background-color: FF8401; -fx-opacity: 90%; -fx-background-radius: 15;" />
+      <Text fill="WHITE" layoutX="183.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BEM VINDO DE VOLTA!">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Text>
+      <Button fx:id="btLogin" layoutX="278.0" layoutY="471.0" mnemonicParsing="false" onAction="#actionLogin" prefHeight="33.0" prefWidth="164.0" style="-fx-background-color: FFFFFF; -fx-opacity: 100%; -fx-background-radius: 10;" text="ENTRAR">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font>
+      </Button>
+      <Pane layoutX="254.0" layoutY="312.0" prefHeight="34.0" prefWidth="200.0" style="-fx-background-color: ffffff; -fx-background-radius: 10;">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="26.0" layoutX="3.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/userIcon.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="txtUser" layoutX="25.0" prefHeight="34.0" prefWidth="200.0" promptText="LOGIN" style="-fx-background-radius: 10; -fx-background-color: ffffff;" />
+         </children>
+      </Pane>
+      <Pane layoutX="255.0" layoutY="388.0" prefHeight="34.0" prefWidth="209.0" style="-fx-background-color: ffffff; -fx-background-radius: 10;">
+         <children>
+            <ImageView fitHeight="26.0" fitWidth="42.0" layoutX="5.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Icons/passwordIcon.png" />
+               </image>
+            </ImageView>
+            <PasswordField fx:id="txtPassword" layoutX="27.0" prefHeight="33.0" prefWidth="175.0" promptText="********" style="-fx-background-color: FFFFFF; -fx-border-radius: 10;" />
+         </children>
+      </Pane>
+      <Text fill="WHITE" layoutX="219.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Entre com seu usuário e senha">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Pane layoutX="295.0" layoutY="163.0" prefHeight="116.0" prefWidth="118.0" style="-fx-background-color: ffffff; -fx-background-radius: 100;">
+         <children>
+            <ImageView fitHeight="142.0" fitWidth="142.0" layoutX="-12.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/userImage-removebg-preview.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text fill="WHITE" layoutX="255.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="USUARIO">
+         <font>
+            <Font name="Segoe UI" size="19.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="255.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SENHA">
+         <font>
+            <Font name="Segoe UI" size="19.0" />
+         </font>
+      </Text>
+   </children>
 </AnchorPane>
