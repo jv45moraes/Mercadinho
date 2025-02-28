@@ -1,5 +1,7 @@
 package Controller;
 
+import java.io.IOException;
+
 import DAO.FuncionarioDAO;
 import Model.Funcionario;
 import Util.Alerts;
@@ -22,10 +24,11 @@ public class controllerLogin {
 	@FXML
 	private TextField txtUser;
 	
+	public static Funcionario funcionario = new Funcionario();
+	
 	@FXML
-	void actionLogin(ActionEvent event) {
+	void actionLogin(ActionEvent event) throws IOException {
 		FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-		Funcionario funcionario = new Funcionario();
 		
 		funcionario = funcionarioDAO.autenticarUser(txtUser.getText(), txtPassword.getText());
 		
@@ -37,11 +40,13 @@ public class controllerLogin {
 			
 		}else if(funcionario.getCpf().equals(txtUser.getText()) && funcionario.getSenha().equals(txtPassword.getText())){
 			Alerts.showAlert("Login bem sucedido!", "Seja bem vindo "+ funcionario.getNome(), "Agora que acessou, vá trabalhar!", AlertType.INFORMATION);	
-			Main.changeScreen("main");
+			txtUser.setText("");
+			txtPassword.setText("");
+			Main.TelaHome();
 		}else {
 			Alerts.showAlert("Erro!", "Erroooooo!", "Erro", AlertType.ERROR);	
-
-		}
+			
+		}	
 	}
 
 }	
